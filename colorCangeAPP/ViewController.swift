@@ -49,19 +49,16 @@ class ViewController: UIViewController {
     @IBAction func sliderRedAction() {
         colorRedValue.text = String(format: "%.2f", arguments: [colorRedSlider.value])
         changeColorView()
-        cangeColorText()
     }
     
     @IBAction func sliderGreenAction() {
         colorGreenValue.text = String(format: "%.2f", arguments: [colorGreenSlider.value])
         changeColorView()
-        cangeColorText()
     }
     
     @IBAction func sliderBlueAction() {
-        colorBlueValue.text = String(round(colorBlueSlider.value * 100) / 100.0)
+        colorBlueValue.text = String(format: "%.2f", arguments: [colorRedSlider.value])
         changeColorView()
-        cangeColorText()
     }
     
     private func changeColorView() {
@@ -72,13 +69,6 @@ class ViewController: UIViewController {
             alpha: 1
         )
     }
-    private func cangeColorText() {
-        colorBlueValue.textColor = colorView.backgroundColor
-        colorRedValue.textColor = colorView.backgroundColor
-        colorGreenValue.textColor = colorView.backgroundColor
-    }
-    
-    
     
 }
 
