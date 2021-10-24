@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet var colorBlueValue: UILabel!
     @IBOutlet var colorBlueSlider: UISlider!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorRedText.text = "Red:"
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
         colorBlueValue.text = String(colorBlueSlider.value)
         
     }
+    
     
     @IBAction func sliderRedAction() {
         colorRedValue.text = String(format: "%.2f", arguments: [colorRedSlider.value])
